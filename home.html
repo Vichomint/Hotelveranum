@@ -1,58 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Datepicker Example</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
-			id="bootstrap-css"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
 		/>
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
-			rel="stylesheet"
-			id="bootstrap-css"
-		/>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			body {
+				background-image: url(img/vecteezy_light-blurry-blue-pastel-brown-gradient-colors-abstract-texture-background_2054558@2x.png);
+			}
+			.login {
+				background: #e4e4e4;
+				width: 90;
+				max-width: 300px;
+				margin: 0 auto 0 auto;
+				border-color: rgb(156, 12, 12);
+				border-radius: 10px 10px 10px 10px;
+				box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+				border-width: 2.5px;
+				border-style: solid;
+				text-align: center;
+			}
+		</style>
+		<title>Registro</title>
 	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<h2>Bootstrap Datepicker</h2>
+	<header>
+		<div class="row">
+			<div>
+				<div></div>
 			</div>
-			<div class="row">
-				<div class="col-sm-2">
-					<form>
-						<div class="form-group">
-							<div class="input-group date" id="datepicker">
-								<input type="text" class="form-control" />
-								<span class="input-group-addon">
-									<span class="glyphicon glyphicon-calendar"></span>
-								</span>
-							</div>
+		</div>
+	</header>
+	<body>
+		<h1 style="margin-top: 20px"><center>Inicio de sesion</center></h1>
+		<div class="row">
+			<div class="login" id="log" style="margin-top: 130px">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<form action="usuario.html" method="POST">
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input
+										type="email"
+										name="email"
+										id="email"
+										class="form-control"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="password">Contraseña</label>
+									<input
+										type="password"
+										name="password"
+										id="password"
+										class="form-control"
+									/>
+								</div>
+								<div
+									class="form-group"
+									style="margin-top: 20px; margin-bottom: 20px"
+								>
+									<a href="/usuario.html">
+										<input type="submit" value="Guardar" />
+									</a>
+								</div>
+							</form>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
 		<script
-			type="text/javascript"
-			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
 		></script>
-		<script>
-			$(function () {
-				$("#datepicker").datepicker({
-					format: "dd/mm/yyyy",
-					autoclose: true,
-					todayHighlight: true,
-					showOtherMonths: true,
-					selectOtherMonths: true,
-					autoclose: true,
-					changeMonth: true,
-					changeYear: true,
-					orientation: "button",
-				});
-			});
-		</script>
 	</body>
 </html>
