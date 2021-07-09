@@ -1,106 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Datepicker Example</title>
 		<link
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-			crossorigin="anonymous"
+			id="bootstrap-css"
 		/>
-		<link rel="stylesheet" href="css/otro.css" />
-		<style>
-			body {
-				background-image: url(./img/vecteezy_light-blurry-blue-pastel-brown-gradient-colors-abstract-texture-background_2054558.jpg);
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				background-size: cover;
-			}
-		</style>
-		<title>home</title>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
+			rel="stylesheet"
+			id="bootstrap-css"
+		/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<body>
-			<div class="area"></div>
-			<nav class="main-menu">
-				<ul>
-					<li>
-						<a href="http://justinfarrow.com">
-							<i class="fa fa-home fa-2x"></i>
-							<span class="nav-text"> Dashboard </span>
-						</a>
-					</li>
-					<li class="has-subnav">
-						<a href="#">
-							<i class="fa fa-laptop fa-2x"></i>
-							<span class="nav-text"> Stars Components </span>
-						</a>
-					</li>
-					<li class="has-subnav">
-						<a href="#">
-							<i class="fa fa-list fa-2x"></i>
-							<span class="nav-text"> Forms </span>
-						</a>
-					</li>
-					<li class="has-subnav">
-						<a href="#">
-							<i class="fa fa-folder-open fa-2x"></i>
-							<span class="nav-text"> Pages </span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-bar-chart-o fa-2x"></i>
-							<span class="nav-text"> Graphs and Statistics </span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-font fa-2x"></i>
-							<span class="nav-text"> Quotes </span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-table fa-2x"></i>
-							<span class="nav-text"> Tables </span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-map-marker fa-2x"></i>
-							<span class="nav-text"> Maps </span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-info fa-2x"></i>
-							<span class="nav-text"> Documentation </span>
-						</a>
-					</li>
-				</ul>
-
-				<ul class="logout">
-					<li>
-						<a href="#">
-							<i class="fa fa-power-off fa-2x"></i>
-							<span class="nav-text"> Logout </span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</body>
+		<div class="container">
+			<div class="row">
+				<h2>Bootstrap Datepicker</h2>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					<form>
+						<div class="form-group">
+							<div class="input-group date" id="datepicker">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 		<script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"
 		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-			crossorigin="anonymous"
-		></script>
+		<script>
+			$(function () {
+				$("#datepicker").datepicker({
+					format: "dd/mm/yyyy",
+					autoclose: true,
+					todayHighlight: true,
+					showOtherMonths: true,
+					selectOtherMonths: true,
+					autoclose: true,
+					changeMonth: true,
+					changeYear: true,
+					orientation: "button",
+				});
+			});
+		</script>
 	</body>
 </html>

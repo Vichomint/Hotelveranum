@@ -5,12 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-			crossorigin="anonymous"
+			id="bootstrap-css"
 		/>
-		<link rel="stylesheet" href="css/otro.css" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
+			rel="stylesheet"
+			id="bootstrap-css"
+		/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/cssusuario.css" />
 		<style>
 			body {
 				background-image: url(./img/vecteezy_light-blurry-blue-pastel-brown-gradient-colors-abstract-texture-background_2054558.jpg);
@@ -19,20 +25,87 @@
 				background-size: cover;
 			}
 		</style>
-		<title>home</title>
+		<title>Pagina</title>
 	</head>
+	<header class="page-head">
+		<a href="" class="logo">
+			<img src="img/Logo2.svg" alt="Logo" height="100px" />
+		</a>
+		<nav class="menu">
+			<a href="" class="menu-link" href="#">iniciar sesión</a>
+			<a href="" class="menu-link" href="#">Ayuda</a>
+			<a href="" class="menu-link" href="#" style="margin-right: 50px"
+				>Sede Elegida</a
+			>
+		</nav>
+	</header>
 	<body>
-		<body>
-			<div class="nav" id="blur">
-				<ul>
-					<li><a class="first">Home</a></li>
-					<li><a class="first">Portfolio</a></li>
-					<li><a>Blog</a></li>
-					<li><a class="last">Pricing</a></li>
-					<li><a class="last">Contact Me</a></li>
-				</ul>
+		<div class="container-cosas">
+			<div class="row">
+				<h2 style="color: white; margin-left: 65px">Reserva de alojamiento</h2>
+				<div class="col-sm-2" style="left: 50px">
+					<form>
+						<div class="form-group">
+							<h5>Fecha llegada</h5>
+							<div class="input-group date" id="datepicker">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-2" style="left: 50px">
+					<form>
+						<div class="form-group">
+							<h5>Fecha ida</h5>
+							<div class="input-group date" id="datepicker2">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-3" style="left: 50px">
+					<form>
+						<div class="form-group">
+							<h5>Tipo Habitación</h5>
+							<div class="input-group date" id="datepicker2">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-3" style="left: 50px">
+					<form>
+						<div class="form-group">
+							<h5>Fecha ida</h5>
+							<div class="input-group date" id="datepicker2">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon"> </span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-2" style="left: 50px">
+					<form>
+						<div class="form-group">
+							<button class="btn btn-danger">buscar</button>
+						</div>
+					</form>
+				</div>
+				<h6 style="color: white; margin-top: 100px; margin-left: 65px">
+					<input name="cbipeliculas" type="checkbox" /> Aún no he decidido fecha
+				</h6>
 			</div>
-		</body>
+		</div>
+
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -43,5 +116,37 @@
 			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
 			crossorigin="anonymous"
 		></script>
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"
+		></script>
+		<script>
+			$(function () {
+				$("#datepicker").datepicker({
+					format: "dd/mm/yyyy",
+					autoclose: true,
+					todayHighlight: true,
+					showOtherMonths: true,
+					selectOtherMonths: true,
+					autoclose: true,
+					changeMonth: true,
+					changeYear: true,
+					orientation: "button",
+				});
+			});
+			$(function () {
+				$("#datepicker2").datepicker({
+					format: "dd/mm/yyyy",
+					autoclose: true,
+					todayHighlight: true,
+					showOtherMonths: true,
+					selectOtherMonths: true,
+					autoclose: true,
+					changeMonth: true,
+					changeYear: true,
+					orientation: "button",
+				});
+			});
+		</script>
 	</body>
 </html>
